@@ -1,0 +1,11 @@
+version: '3'
+services:
+  streamlit_crypto:
+    image: streamlit_crypto
+    container_name: crypto_options
+    build: .
+    ports:
+      - '5000:5000'
+    volumes:
+      - './project:/usr/app/project'
+    restart: unless-stopped
